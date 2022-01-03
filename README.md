@@ -2,9 +2,11 @@
 
 ## Quick start
 
+Linux only
+
 ```
 nasm -felf64 -g hello.asm
-ld -o -g hello hello.o
+ld -g -o hello hello.o
 ./hello
 ```
 
@@ -23,4 +25,10 @@ x/x $rsi
 x/i $rip
 # registers
 info registers
+# print bits of specific register
+p/t $r8
+# print adress of var
+p/x &var_in_data_section
+# examine value of var
+x/x &var_in_data_section
 ```
