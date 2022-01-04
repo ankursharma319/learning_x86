@@ -19,6 +19,7 @@ _start:     mov         rax, 1                  ; system call for write
             add         r8, r9
             mov         [res_var_1], r8         ; copy value into memory from register
             mov BYTE    [res_var_1], 99         ; copy immediate value into memory; requires size
+            cmova       rax, r8                 ; condiional move - prefer these types of instructions over jmps
 
             ; 128 bit dividend, RDX:RAX
             mov         rax, 890

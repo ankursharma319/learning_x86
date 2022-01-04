@@ -24,7 +24,10 @@ x/x $rsi
 # next instruction pointers
 x/i $rip
 # registers
-info registers
+info registers general
+info registers mmx/sse/float/all/vector/system
+# print value in specific register
+p $xmm0
 # print bits of specific register
 p/t $r8
 # print adress of var
