@@ -48,7 +48,7 @@ _start:     mov         rax, 1                  ; system call for write
             section     .data
 message:    db          "Hello, World", 10      ; note the newline at the end
 exit_c_1:   dq          24d
-exit_c_2:   dq          11d
+exit_c_2:   dq          -24d
 
             section     .bss
 res_var_1:  resb        4                       ; reserve 4 bytes
